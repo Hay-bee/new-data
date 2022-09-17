@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ncdc form</title>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+    </head>
+    <body>
+        <div id="box">
+            <form id="form" autocomplete="off" name="myform" onsubmit="event.preventDefault(); SUBMITData()" >
+                <p>First Name: <input id="fName" class="field" type="text" name="firstname" style="margin-left: 90px" required></p><br>
+                <p>Last Name: <input  id="lName" class="field" type="text" name="lastname" style="margin-left: 91px" required></p><br>
+                <p>Email Address: <input id="email" class="field"
+                    type="email" name="emailaddress" style="margin-left: 65px" required></p><br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" class="field" style="margin-left:120px;" required>
+                    <option value="" disabled selected hidden >Select Your Gender</option>
+                    <option class="gender">Male</option>
+                    <option class="gender">female</option>
+                </select>
+                <p><input id="check" type="checkbox">Recently came to Nigeria within the last 14 days?</p>
+                
+                <button id="SUBMIT"  type="SUBMIT" onsubmit="SUBMITData()" name="SUBMIT">SUBMIT</button>
+            </form>
+        </div>
+                
+
+         <table id="table">
+            
+            <tr id="result_tr" style="display: none;">
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Gender</th>
+                <th>Came to Nigeria within the last 14day?</th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+            <tbody></tbody>
+         </table> 
+         <script src="text.js"></script>
+    </body>
+</html>
